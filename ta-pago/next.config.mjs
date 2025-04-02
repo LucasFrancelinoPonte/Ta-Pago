@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    images: {
+      domains: [],
+    },
+    // Habilita o modo escuro
+    darkMode: true,
+  };
+  
+  export default nextConfig;
