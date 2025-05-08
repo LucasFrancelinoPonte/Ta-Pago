@@ -1,36 +1,15 @@
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
-const path = require('path');
 const { db } = require('./config/database');
 
-// Importar rotas
-const authRoutes = require('./routes/authRoutes');
-
-const app = express();
-const PORT = process.env.PORT || 3001;
-
-// Middlewares
-app.use(cors());
-app.use(express.json());
-
-// Servir arquivos estáticos
-app.use(express.static(path.join(__dirname, 'projeto')));
+/*// Importar rotas
+import authRoutes from './routes/authRoutes';
 
 // Rotas da API
 app.use('/api/auth', authRoutes);
-
-// Rota para a página inicial
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'projeto', 'Páginas', 'index.html'));
-});
-
-// Rota para todas as outras páginas HTML
-app.get('/:page', (req, res) => {
-  const page = req.params.page;
-  res.sendFile(path.join(__dirname, 'projeto', 'Páginas', `${page}.html`));
-});
-
+*/
+const app = express();
+const PORT = process.env.PORT || 3001;
 // Iniciar o servidor
 async function startServer() {
   try {
