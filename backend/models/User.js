@@ -5,7 +5,7 @@ class User extends Model{
 }
 
 User.init({
-  id_usuario: {
+  id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
@@ -17,7 +17,6 @@ User.init({
   email: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
     validate: {
       notNull: {
         msg: 'Email não pode ser nulo'
@@ -41,7 +40,7 @@ User.init({
   },
 }, {
   sequelize: db,
-  tableName: "usuario",
+  tableName: "usuarios",
   timestamps: false,
 });
 

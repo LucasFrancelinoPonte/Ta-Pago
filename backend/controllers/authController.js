@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/User')
 const enviar = require('../lib/email')
 
 // Login de usuário
