@@ -27,7 +27,9 @@ exports.login = async (req, res) => {
 };
 
 exports.cru = async (req, res) => {
+  console.log("req.body:", req.body);
   const userData = {
+    nome: req.body.nome,
     email: req.body.email,
     senha: req.body.senha,
   }
